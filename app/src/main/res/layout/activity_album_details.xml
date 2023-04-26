@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Album_details"
+    android:background="@color/dark">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_Albums"
+        android:padding ="10dp"
+        android:background="@drawable/action_bar_shape"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_centerVertical="true"
+            android:id="@+id/backbutton_settings"
+            android:onClick="backPressed"/>
+        <TextView
+            android:id = "@+id/time"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginLeft = "10dp"
+            android:text = "Album"
+            android:textSize = "20sp"
+            android:layout_centerHorizontal="true"
+            android:textColor = "@color/white"
+            android:textStyle = "bold"
+            android:layout_centerVertical="true"
+
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/content"
+        android:layout_below="@+id/toolbar_Albums">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/gg">
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/cov"
+                android:id="@+id/album_art"
+                android:background="@color/lightDark"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/album_name"
+            android:layout_below="@+id/gg"
+            android:layout_centerHorizontal="true"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:text="Album_name"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/song_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/album_name"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/shortcut_holder"
+        android:layout_alignParentBottom="true"
+        android:onClick="song_details">
+        <include
+            layout="@layout/music_shortcut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/dark"
+    >
+    <RelativeLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_weight = "0.6"
+        android:id="@+id/toolbar_setting"
+        android:padding = "10dp"
+        android:background="@drawable/action_bar_shape">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_centerVertical="true"
+            android:id="@+id/backbutton_settings"
+            android:onClick="backPressed"/>
+        <TextView
+            android:id = "@+id/time"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginLeft = "10dp"
+            android:text = "SETTINGS"
+            android:textSize = "20sp"
+            android:layout_centerHorizontal="true"
+            android:textColor = "@color/white"
+            android:textStyle = "bold"
+            android:layout_centerVertical="true"
+
+            />
+
+    </RelativeLayout>
+    <include
+        android:id="@+id/settings"
+        layout="@layout/setings"
+        android:layout_below="@+id/toolbar_setting"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+
+</RelativeLayout>
