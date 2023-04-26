@@ -1,4 +1,4 @@
-# Mello_v2:
+# Mello:
 Android music player that uses reinforcement learning to predict which song the user wants to get played next.
 
 # Utilizing:
